@@ -1,14 +1,13 @@
-t=int(input())
-for _ in range(t):
-    n=int(input())
-    s=list(map(int,input().split()))
-    s.sort()
-    x=0
-    for i in range(1,n):
-        if s[i]<s[i-1]:
-            x=1
-            break
-    if x==0:
-        print("YES")
+n=int(input())
+x=0
+y=0
+for _ in range(n):
+    name=input()
+    if name=='A':
+        x+=1
     else:
-        print("NO")
+        y+=1
+if x>y:
+    print('A')
+else:
+    print('ABC')
